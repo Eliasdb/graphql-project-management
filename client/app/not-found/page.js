@@ -1,4 +1,3 @@
-import "bootstrap/dist/css/bootstrap.css";
 import Link from "next/link";
 import { FaExclamationTriangle } from "react-icons/fa";
 
