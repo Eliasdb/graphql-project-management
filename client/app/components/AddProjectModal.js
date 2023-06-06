@@ -25,7 +25,7 @@ const AddProjectModal = () => {
   // Get Clients for select
   const { loading, error, data } = useQuery(GET_CLIENTS);
 
-  const onSubmit = (e) => {
+  const handleClick = (e) => {
     e.preventDefault();
 
     if (name === "" || description === "" || status === "") {
@@ -79,7 +79,7 @@ const AddProjectModal = () => {
                   ></button>
                 </div>
                 <div className="modal-body">
-                  <form onSubmit={onSubmit}>
+                  <form>
                     <div className="mb-3">
                       <label className="form-label">Name</label>
                       <input
@@ -131,7 +131,7 @@ const AddProjectModal = () => {
                     </div>
 
                     <button
-                      type="submit"
+                      onClick={handleClick}
                       data-bs-dismiss="modal"
                       className="btn btn-primary"
                     >

@@ -21,7 +21,7 @@ const AddClientModal = () => {
     },
   });
 
-  const onSubmit = (e) => {
+  const handleClick = (e) => {
     e.preventDefault();
 
     if (name === "" || email === "" || phone === "") {
@@ -29,6 +29,7 @@ const AddClientModal = () => {
     }
 
     addClient(name, email, phone);
+    console.log("hi");
 
     setName("");
     setEmail("");
@@ -69,7 +70,7 @@ const AddClientModal = () => {
               ></button>
             </div>
             <div className="modal-body">
-              <form onSubmit={onSubmit}>
+              <form>
                 <div className="mb-3">
                   <label className="form-label">Name</label>
                   <input
@@ -102,7 +103,7 @@ const AddClientModal = () => {
                 </div>
 
                 <button
-                  type="submit"
+                  onClick={handleClick}
                   data-bs-dismiss="modal"
                   className="btn btn-secondary"
                 >
