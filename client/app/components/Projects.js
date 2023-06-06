@@ -18,7 +18,7 @@ const Projects = () => {
           ))}
         </div>
       ) : (
-        <p>No Projects</p>
+        <p>No Projects...</p>
       )}
     </>
   );

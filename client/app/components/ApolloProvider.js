@@ -22,7 +22,7 @@ const ApolloProviderWrapper = ({ children }) => {
   });
 
   const client = new ApolloClient({
-    uri: "http://localhost:5001/graphql",
+    uri: "https://graphql-project-management.onrender.com/graphql",
     cache,
   });
 
